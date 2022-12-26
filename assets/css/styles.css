@@ -21,6 +21,7 @@ body{
 h1,h2,h3{
     font-weight: 900;
     margin: 1rem 0 4rem 0;
+    line-height: 1.2;
 }
 h1{
     font-size: 4.8rem;
@@ -63,13 +64,13 @@ img{
     margin-top: 5rem;
 }
 
-/* --------------------------------------------------------------- */
 
+/* --------------------------------------------------------------- */
 /* Header */
 
 .header{
     min-height: 60rem;
-    background-image: url(../assets/img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,7 +108,7 @@ img{
     display: block;
     width: 4rem;
     height: 4rem;
-    background-image: url(./img/telefono.png);
+    background-image: url(../img/telefono.png);
     background-repeat: no-repeat;
     background-position: center center;
     margin-right: 1rem;
@@ -172,5 +173,87 @@ img{
     }
     .slogan h1{
         font-size:5rem;
+    }
+}
+
+
+/* --------------------------------------------------------------- */
+/* Nosotros */
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-image: url(../img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.contenido-nosotros{
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+.contenido-nosotros h2,
+.contenido-nosotros p {
+    margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+    .nosotros{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .contenido-nosotros{
+        grid-column: 2/4;
+    }
+}
+
+
+/* --------------------------------------------------------------- */
+/* Modelos */
+.titulo-modelo{
+    margin-bottom: 5rem;
+}
+.modelo{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.contenido-modelo{
+    padding: 5rem;
+    background-color: var(--blanco);
+}
+.basico{
+    background-image: url(../img/modelo_basico.jpg);
+}
+.premier{
+    background-image: url(../img/modelo_premier.jpg);
+}
+.elite{
+    background-image: url(../img/modelo_elite.jpg);
+}
+
+@media (min-width: 992px) {
+    .modelo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .basico, .elite{
+        background-position: right center;
+    }
+    .basico .contenido-modelo{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    .premier{
+        background-position: left center;
+    }
+    .premier .contenido-modelo{
+        grid-column: 2/3;
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    .elite .contenido-modelo{
+        grid-column: 1/2;
+        padding: 2rem 2rem 2rem 0;
     }
 }
